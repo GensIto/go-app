@@ -1,0 +1,38 @@
+{{define "content"}}
+<h1 class="text-center">signup</h1>
+
+<form role="form" action="/signup" method="post">
+  <h2 class="text-center text-lg font-mono my-4">SampleApp</h2>
+  <div class="space-y-2 w-2/3 mx-auto">
+    <input
+      id="name"
+      type="text"
+      name="name"
+      class="border-2 border-gray-300 rounded-md w-full p-2 font-mono"
+      placeholder="お名前"
+      required
+      autofocus
+    />
+    <input
+      type="email"
+      name="email"
+      class="border-2 border-gray-300 rounded-md w-full p-2 font-mono"
+      placeholder="Email"
+      required
+    />
+    <input
+      type="password"
+      name="password"
+      class="border-2 border-gray-300 rounded-md w-full p-2 font-mono"
+      placeholder="パスワード"
+      required
+    />
+    <button
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
+      type="submit"
+    >
+      登録
+    </button>
+  </div>
+</form>
+{{end}}

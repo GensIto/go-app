@@ -1,0 +1,17 @@
+{{define "content"}}
+<p class="text-3xl font-mono text-center">UserName:{{.Name}}</p>
+<h1 class="text-center text-lg font-mono my-4">Sample TodoApp</h1>
+
+<p class="text-center text-lg font-mono my-4">
+  [<a href="/todos/new">Create</a>]
+</p>
+<hr />
+
+{{ range .Todos }}
+<p class="text-center text-base font-mono my-4">{{ .Content }}</p>
+<div class="flex space-x-2 justify-center">
+  <p>[<a href="/todos/edit/{{.ID}}">Edit</a>]</p>
+  <p>[<a href="/todos/delete/{{.ID}}">Delete</a>]</p>
+</div>
+<hr />
+{{end}} {{end}}
